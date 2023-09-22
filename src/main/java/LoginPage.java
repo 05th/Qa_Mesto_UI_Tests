@@ -22,6 +22,14 @@ public class LoginPage {
     }
 
     // 5. Create methods for locators
+    public void setEmail(String email) {
+        driver.findElement(emailField).sendKeys(email);
+    }
+
+    public void setPassword(String password) {
+        driver.findElement(passwordField).sendKeys(password);
+    }
+
     public boolean checkSignInIsEnabled() {
         return driver.findElement(signInButton).isEnabled();
     }
@@ -40,4 +48,10 @@ public class LoginPage {
 //            assertEquals("Errors", exectedTextButton , driver.findElement (registrationButton).getText());
 //        }
 
+    // Combine methods into a step
+    public void login(String email, String password) {
+        setEmail(email);
+        setPassword(password);
+        clickSignInButton();
+    }
 }
