@@ -10,5 +10,8 @@ public class HomePage {
     private By profileEditButton = By.xpath("//button[@class = 'profile__edit-button']");
     private By profileAddButton = By.xpath("//button[@class = 'profile__add-button']");
 
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+    }
 
 }
