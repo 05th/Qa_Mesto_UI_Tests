@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import static java.time.Duration.ofSeconds;
 
 public class HomePage {
 
@@ -18,8 +19,8 @@ public class HomePage {
 
     // Method for loading page
     public void waitForLoadHeader() {
-        new WebDriverWait(driver,3)
-                .until(ExpectedConditions.visibilityOfElementLocated(headerUserEmail);
+        new WebDriverWait(driver, ofSeconds(3))
+                .until(ExpectedConditions.visibilityOfElementLocated(headerUserEmail));
     }
 
     // Method for get text from email header
