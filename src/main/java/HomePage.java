@@ -1,5 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
 
@@ -14,4 +16,14 @@ public class HomePage {
         this.driver = driver;
     }
 
+    // Method for loading page
+    public void waitForLoadHeader() {
+        new WebDriverWait(driver,3)
+                .until(ExpectedConditions.visibilityOfElementLocated(headerUserEmail);
+    }
+
+    // Method for get text from email header
+    public String getTextEmailHeader() {
+        return driver.findElement(headerUserEmail).getText();
+    }
 }
