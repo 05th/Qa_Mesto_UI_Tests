@@ -27,4 +27,9 @@ public class HomePage {
     public String getTextEmailHeader() {
         return driver.findElement(headerUserEmail).getText();
     }
+    // Method click on Profile edit button
+    public void clickProfileEditButton() {
+        driver.findElement(profileAddButton).click();
+    }
+
 }
