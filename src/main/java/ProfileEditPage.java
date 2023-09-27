@@ -13,11 +13,15 @@ public class ProfileEditPage {
     public ProfileEditPage(WebDriver driver){
         this.driver = driver;
     }
-
+    // Method for check is Enabled field "description" && Clear this field && Send keys
     public void EnterNewValue(String description) {
-        Assert.assertTrue(driver.findElement(userDescription)).isEnabled();
+        Assert.assertTrue(driver.findElement(userDescription).isEnabled());
         driver.findElement(userDescription).clear();
         driver.findElement(userDescription).sendKeys(description);
     }
-
+    // Method for check is Enabled "save" button && click on it
+    public void clickButtonSave() {
+        Assert.assertTrue(driver.findElement(buttonSave).isEnabled());
+        driver.findElement(buttonSave).click();
+    }
 }
