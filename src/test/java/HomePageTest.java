@@ -32,13 +32,23 @@ public class HomePageTest {
     }
 
     @Test
-    public void checkActivity() {
+    public void checkActivityByDescription() {
         homePage.waitForLoadProfileData();
         homePage.clickProfileEditButton();
         String description = "SDET";
-        profileEditPage.EnterNewValue(description);
+        profileEditPage.enterNewValueForDescription(description);
         profileEditPage.clickButtonSave();
         homePage.waitForChangedProfileDescription(description);
+    }
+
+    @Test
+    public void checkActivityByTitle() {
+        homePage.waitForLoadProfileData();
+        homePage.clickProfileEditButton();
+        String title = "Uvasya";
+        profileEditPage.enterNewValueForTitle(title);
+        profileEditPage.clickButtonSave();
+        homePage.waitForChangedProfileTitle(title);
     }
 
     @After
