@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import static java.time.Duration.ofSeconds;
 
 public class HomePage {
@@ -29,9 +30,23 @@ public class HomePage {
     public String getTextEmailHeader() {
         return driver.findElement(headerUserEmail).getText();
     }
+
     // Method click on Profile edit button
     public void clickProfileEditButton() {
-        driver.findElement(profileAddButton).click();
+        driver.findElement(profileEditButton).click();
     }
 
+    // Method for load profile data
+    public void waitForLoadProfileData() {
+        new WebDriverWait(driver, ofSeconds(10))
+                .until(driver -> (driver.findElement(profileTitle).getText()
+                        != null && !driver.findElement(profileTitle).getText().isEmpty()
+                ));
+    }
+
+    // Method for wait, when is changing profile description data
+    public void waitForChangedProfileDescription(String changed) {
+        new WebDriverWait(driver, ofSeconds(10))
+                .until(ExpectedConditions.textToBePresentInElementLocated(profileDescription, String.valueOf(changed)));
+    }
 }

@@ -12,6 +12,7 @@ public class HomePageTest {
     private WebDriver driver = new ChromeDriver();
     LoginPage loginPage = new LoginPage(driver);
     HomePage homePage = new HomePage(driver);
+    ProfileEditPage profileEditPage = new ProfileEditPage(driver);
 
     @Before
     public void setUp() {
@@ -31,7 +32,14 @@ public class HomePageTest {
     }
 
     @Test
-    public
+    public void checkActivity() {
+        homePage.waitForLoadProfileData();
+        homePage.clickProfileEditButton();
+        String description = "SDET";
+        profileEditPage.EnterNewValue(description);
+        profileEditPage.clickButtonSave();
+        homePage.waitForChangedProfileDescription(description);
+    }
 
     @After
     public void tearDown() {
