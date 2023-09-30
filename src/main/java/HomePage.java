@@ -49,4 +49,9 @@ public class HomePage {
         new WebDriverWait(driver, ofSeconds(10))
                 .until(ExpectedConditions.textToBePresentInElementLocated(profileDescription, String.valueOf(changed)));
     }
+
+    public void waitForChangedProfileTitle(String changed) {
+        new WebDriverWait(driver, ofSeconds(10))
+                .until(ExpectedConditions.textToBePresentInElementLocated(profileTitle, String.valueOf(changed)));
+    }
 }
