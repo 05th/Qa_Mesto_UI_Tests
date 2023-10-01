@@ -13,6 +13,7 @@ public class HomePageTest {
     LoginPage loginPage = new LoginPage(driver);
     HomePage homePage = new HomePage(driver);
     ProfileEditPage profileEditPage = new ProfileEditPage(driver);
+    ProfileImagePage profileImagePage = new ProfileImagePage(driver);
 
     @Before
     public void setUp() {
@@ -49,6 +50,15 @@ public class HomePageTest {
         profileEditPage.enterNewValueForTitle(title);
         profileEditPage.clickButtonSave();
         homePage.waitForChangedProfileTitle(title);
+    }
+
+    @Test
+    public void checkImageOnAvatarChanged() {
+        homePage.waitForLoadProfileData();
+        homePage.clickProfileImage();
+        String newLink = "https://sb-smart.ru/wp-content/uploads/9/e/e/9eec7a7829d53f220ec02b4e0b011eb9.jpeg";
+        profileImagePage.addNewImageLink(newLink);
+        profileImagePage.clickSaveButton();
     }
 
     @After

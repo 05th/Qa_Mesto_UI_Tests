@@ -58,4 +58,10 @@ public class HomePage {
     public void clickProfileImage() {
         driver.findElement(profileImage).click();
     }
+
+//    public void waitForLoadImageEditProfile(String changed) {
+//        new WebDriverWait(driver, ofSeconds(3))
+//                .until(ExpectedConditions.textToBePresentInElementLocated(profileImage, String.valueOf(changed)));
+//    }
+
 }
