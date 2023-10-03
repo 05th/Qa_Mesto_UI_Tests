@@ -6,7 +6,7 @@ public class ProfileImagePage {
     private WebDriver driver;
 
     private By imageLink = By.xpath("//input[@id = 'owner-avatar']");
-    private By saveButton = By.xpath("//button[@class = 'button popup__button']");
+    private By saveButton = By.xpath("//div[@id='root']/div/div[4]/div/form/button[2]");
 
     // Constructor
     public ProfileImagePage(WebDriver driver) {

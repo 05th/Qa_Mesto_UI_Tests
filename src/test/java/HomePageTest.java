@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import org.hamcrest.MatcherAssert;
 
 import static org.hamcrest.CoreMatchers.*;
@@ -7,9 +8,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class HomePageTest {
     private WebDriver driver = new ChromeDriver();
+//    private SafariDriver driver = new SafariDriver();
     LoginPage loginPage = new LoginPage(driver);
     HomePage homePage = new HomePage(driver);
     ProfileEditPage profileEditPage = new ProfileEditPage(driver);
@@ -24,6 +27,7 @@ public class HomePageTest {
     }
 
     @Test
+    @DisplayName("Check Email in Header")
     public void checkEmailInHeader() {
         homePage.waitForLoadHeader();
         String actualResult = homePage.getTextEmailHeader();
