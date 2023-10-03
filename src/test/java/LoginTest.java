@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import org.checkerframework.checker.units.qual.A;
 import org.junit.After;
 import org.junit.Before;
@@ -18,6 +19,7 @@ public class LoginTest {
         driver.get("https://qa-mesto.praktikum-services.ru/");
     }
 
+    @DisplayName("LogIn Test")
     @Test
     public void loginTest() {
         loginPage.login("qatest@test.ru", "test");

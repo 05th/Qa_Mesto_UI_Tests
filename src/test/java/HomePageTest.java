@@ -12,7 +12,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class HomePageTest {
     private WebDriver driver = new ChromeDriver();
-//    private SafariDriver driver = new SafariDriver();
+    //    private SafariDriver driver = new SafariDriver();
     LoginPage loginPage = new LoginPage(driver);
     HomePage homePage = new HomePage(driver);
     ProfileEditPage profileEditPage = new ProfileEditPage(driver);
@@ -36,6 +36,7 @@ public class HomePageTest {
 
     }
 
+    @DisplayName("Change description in user")
     @Test
     public void checkActivityByDescription() {
         homePage.waitForLoadProfileData();
@@ -46,6 +47,7 @@ public class HomePageTest {
         homePage.waitForChangedProfileDescription(description);
     }
 
+    @DisplayName("Change name in user")
     @Test
     public void checkActivityByTitle() {
         homePage.waitForLoadProfileData();
@@ -56,6 +58,7 @@ public class HomePageTest {
         homePage.waitForChangedProfileTitle(title);
     }
 
+    @DisplayName("Change avatar image in user")
     @Test
     public void checkImageOnAvatarChanged() {
         homePage.waitForLoadProfileData();
