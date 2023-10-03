@@ -12,7 +12,6 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class HomePageTest {
     private WebDriver driver = new ChromeDriver();
-    //    private SafariDriver driver = new SafariDriver();
     LoginPage loginPage = new LoginPage(driver);
     HomePage homePage = new HomePage(driver);
     ProfileEditPage profileEditPage = new ProfileEditPage(driver);
