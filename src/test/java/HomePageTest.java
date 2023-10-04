@@ -1,14 +1,12 @@
 import io.qameta.allure.junit4.DisplayName;
 import org.hamcrest.MatcherAssert;
-
-import static org.hamcrest.CoreMatchers.*;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.safari.SafariDriver;
+
+import static org.hamcrest.CoreMatchers.is;
 
 public class HomePageTest {
     private WebDriver driver = new ChromeDriver();

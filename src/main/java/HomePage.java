@@ -9,7 +9,7 @@ public class HomePage {
 
     private WebDriver driver;
     private By headerUserEmail = By.xpath("//p[@class = 'header__user']");
-    private By signOutButton = By.xpath("//button[@class = 'header__logout']");
+    private By logOutButton = By.xpath("//button[@class = 'header__logout']");
     private By profileImage = By.xpath("//div[@class = 'profile__image']");
     private By profileTitle = By.xpath("//h1[@class = 'profile__title']");
     private By profileDescription = By.xpath("//p[@class = 'profile__description']");
@@ -63,8 +63,8 @@ public class HomePage {
         driver.findElement(profileCardAddButton).click();
     }
 
-    public void clickSignOutButton() {
-        driver.findElement(signOutButton).click();
+    public void clickLogOutButton() {
+        driver.findElement(logOutButton).click();
     }
 
 //    public void waitForLoadImageEditProfile(String changed) {
