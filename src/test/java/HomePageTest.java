@@ -16,6 +16,7 @@ public class HomePageTest {
     HomePage homePage = new HomePage(driver);
     ProfileEditPage profileEditPage = new ProfileEditPage(driver);
     ProfileImagePage profileImagePage = new ProfileImagePage(driver);
+    ProfileNewCardPage profileNewCardPage = new ProfileNewCardPage();
 
     @Before
     public void setUp() {
@@ -65,6 +66,18 @@ public class HomePageTest {
         String newLink = "https://sb-smart.ru/wp-content/uploads/9/e/e/9eec7a7829d53f220ec02b4e0b011eb9.jpeg";
         profileImagePage.addNewImageLink(newLink);
         profileImagePage.clickSaveButton();
+    }
+
+    @DisplayName("Add new card on home page")
+    @Test
+    public void addNewPlaceCard() {
+        homePage.waitForLoadProfileData();
+        homePage.clickProfileCardAddButton();
+        String newName = "Moscow";
+        String newLink = "https://sportishka.com/uploads/posts/2022-04/1650612987_17-sportishka-com-p-sovremennaya-moskva-krasivo-foto-18.jpg";
+        profileNewCardPage.enterNewPlaceName(newName);
+        profileNewCardPage.enterNewCardLink(newLink);
+        profileNewCardPage.clickButtonSavePlace();
     }
 
     @After

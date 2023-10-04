@@ -14,7 +14,7 @@ public class HomePage {
     private By profileTitle = By.xpath("//h1[@class = 'profile__title']");
     private By profileDescription = By.xpath("//p[@class = 'profile__description']");
     private By profileEditButton = By.xpath("//button[@class = 'profile__edit-button']");
-    private By profileAddButton = By.xpath("//button[@class = 'profile__add-button']");
+    private By profileCardAddButton = By.xpath("//button[@class = 'profile__add-button']");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -57,6 +57,14 @@ public class HomePage {
 
     public void clickProfileImage() {
         driver.findElement(profileImage).click();
+    }
+
+    public void clickProfileCardAddButton() {
+        driver.findElement(profileCardAddButton).click();
+    }
+
+    public void clickSignOutButton() {
+        driver.findElement(signOutButton).click();
     }
 
 //    public void waitForLoadImageEditProfile(String changed) {
