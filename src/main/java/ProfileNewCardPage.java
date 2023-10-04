@@ -9,7 +9,7 @@ public class ProfileNewCardPage {
     private By buttonSavePlace = By.xpath("//*[@id='root']/div/div[2]/div/form/button[2]");
 
     // Constructor
-    public ProfileNewCardPage() {
+    public ProfileNewCardPage(WebDriver driver) {
         this.driver = driver;
     }
 

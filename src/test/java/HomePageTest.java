@@ -16,7 +16,7 @@ public class HomePageTest {
     HomePage homePage = new HomePage(driver);
     ProfileEditPage profileEditPage = new ProfileEditPage(driver);
     ProfileImagePage profileImagePage = new ProfileImagePage(driver);
-    ProfileNewCardPage profileNewCardPage = new ProfileNewCardPage();
+    ProfileNewCardPage profileNewCardPage = new ProfileNewCardPage(driver);
 
     @Before
     public void setUp() {
