@@ -42,11 +42,6 @@ public class LoginPage {
         driver.findElement(singUpButton).click();
     }
 
-    // метод проверяет текст кнопки «Регистрация»
-//        public void checkTextRegistrationButton() {
-//            String exectedTextButton = "Регистрация";
-//            assertEquals("Errors", exectedTextButton , driver.findElement (registrationButton).getText());
-//        }
 
     // Combine methods into a step
     public void login(String email, String password) {
