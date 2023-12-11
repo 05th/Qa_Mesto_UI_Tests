@@ -67,9 +67,4 @@ public class HomePage {
         driver.findElement(logOutButton).click();
     }
 
-//    public void waitForLoadImageEditProfile(String changed) {
-//        new WebDriverWait(driver, ofSeconds(3))
-//                .until(ExpectedConditions.textToBePresentInElementLocated(profileImage, String.valueOf(changed)));
-//    }
-
 }

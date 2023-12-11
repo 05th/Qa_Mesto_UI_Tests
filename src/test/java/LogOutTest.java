@@ -17,9 +17,8 @@ public class LogOutTest {
         String password = "test";
         loginPage.login(email, password);
     }
-
-    @DisplayName("Log Out Test")
     @Test
+    @DisplayName("Log Out Test")
     public void logOut() {
         homePage.waitForLoadProfileData();
         homePage.clickLogOutButton();

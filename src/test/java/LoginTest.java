@@ -17,9 +17,8 @@ public class LoginTest {
     public void setUp() {
         driver.get("https://qa-mesto.praktikum-services.ru/");
     }
-
-    @DisplayName("LogIn Test")
     @Test
+    @DisplayName("LogIn Test")
     public void loginTest() {
         loginPage.login("qatest@test.ru", "test");
     }

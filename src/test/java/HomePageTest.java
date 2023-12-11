@@ -34,8 +34,8 @@ public class HomePageTest {
 
     }
 
-    @DisplayName("Change description in user")
     @Test
+    @DisplayName("Change description in user")
     public void checkActivityByDescription() {
         homePage.waitForLoadProfileData();
         homePage.clickProfileEditButton();
@@ -45,8 +45,8 @@ public class HomePageTest {
         homePage.waitForChangedProfileDescription(description);
     }
 
-    @DisplayName("Change name in user")
     @Test
+    @DisplayName("Change name in user")
     public void checkActivityByTitle() {
         homePage.waitForLoadProfileData();
         homePage.clickProfileEditButton();
@@ -55,9 +55,8 @@ public class HomePageTest {
         profileEditPage.clickButtonSave();
         homePage.waitForChangedProfileTitle(title);
     }
-
-    @DisplayName("Change avatar image in user")
     @Test
+    @DisplayName("Change avatar image in user")
     public void checkImageOnAvatarChanged() {
         homePage.waitForLoadProfileData();
         homePage.clickProfileImage();
@@ -65,9 +64,8 @@ public class HomePageTest {
         profileImagePage.addNewImageLink(newLink);
         profileImagePage.clickSaveButton();
     }
-
-    @DisplayName("Add new card on home page")
     @Test
+    @DisplayName("Add new card on home page")
     public void addNewPlaceCard() {
         homePage.waitForLoadProfileData();
         homePage.clickProfileCardAddButton();
