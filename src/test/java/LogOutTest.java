@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LogOutTest {
-    private WebDriver driver = new ChromeDriver();
+    WebDriver driver = new ChromeDriver();
     LoginPage loginPage = new LoginPage(driver);
     HomePage homePage = new HomePage(driver);
 

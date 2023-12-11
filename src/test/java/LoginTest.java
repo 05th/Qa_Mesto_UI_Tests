@@ -4,11 +4,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class LoginTest {
 
     // Create Web driver
-    private WebDriver driver = new ChromeDriver();
+    //WebDriver driver = new ChromeDriver();
+    WebDriver driver = new FirefoxDriver();
 
     // Create Object Login Page class
     LoginPage loginPage = new LoginPage(driver);

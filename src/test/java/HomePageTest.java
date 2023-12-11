@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.hamcrest.CoreMatchers.is;
 
 public class HomePageTest {
-    private WebDriver driver = new ChromeDriver();
+    WebDriver driver = new ChromeDriver();
     LoginPage loginPage = new LoginPage(driver);
     HomePage homePage = new HomePage(driver);
     ProfileEditPage profileEditPage = new ProfileEditPage(driver);
