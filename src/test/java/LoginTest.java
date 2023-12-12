@@ -9,8 +9,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class LoginTest {
 
     // Create Web driver
-    //WebDriver driver = new ChromeDriver();
-    WebDriver driver = new FirefoxDriver();
+    WebDriver driver = new ChromeDriver();
+    //WebDriver driver = new FirefoxDriver();
 
     // Create Object Login Page class
     LoginPage loginPage = new LoginPage(driver);
