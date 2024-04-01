@@ -1,9 +1,13 @@
+package tests;
+
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.HomePage;
+import pages.LoginPage;
 
 public class LogOutTest {
     WebDriver driver = new ChromeDriver();

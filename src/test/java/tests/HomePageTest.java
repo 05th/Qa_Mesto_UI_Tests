@@ -1,3 +1,5 @@
+package tests;
+
 import io.qameta.allure.junit4.DisplayName;
 import org.hamcrest.MatcherAssert;
 import org.junit.After;
@@ -5,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.*;
 
 import static org.hamcrest.CoreMatchers.is;
 
