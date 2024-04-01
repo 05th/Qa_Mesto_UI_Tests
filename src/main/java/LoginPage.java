@@ -15,7 +15,6 @@ public class LoginPage {
     private By signInButton = By.xpath("//button[@class = 'auth-form__button']");
     private By singUpButton = By.xpath("//a[@class = 'header__auth-link']");
 
-
     // 4. Create Constructor
     public LoginPage(WebDriver driver) {
         this.driver = driver;
