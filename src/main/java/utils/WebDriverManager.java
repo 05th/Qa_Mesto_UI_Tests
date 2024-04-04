@@ -1,8 +1,12 @@
 package utils;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverManager {
+// Класс для установки и иницилизации Веб драйвера
     public static WebDriver createWebdriver(String browser) {
         WebDriver driver = null;
 
@@ -25,5 +29,4 @@ public class WebDriverManager {
 
         return driver;
     }
-
 }
