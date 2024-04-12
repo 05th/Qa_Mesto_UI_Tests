@@ -68,5 +68,4 @@ public class HomePage {
     public void clickLogOutButton() {
         driver.findElement(logOutButton).click();
     }
-
 }
