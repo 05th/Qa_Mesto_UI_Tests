@@ -8,8 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class WebDriverManager {
 // Класс для установки и иницилизации Веб драйвера
     public static WebDriver createWebdriver(String browser) {
-        WebDriver driver = null;
 
+        WebDriver driver = null;
         switch (browser.toLowerCase()) {
             case "chrome":
                 System.setProperty("webdriver.chrome.driver", "path_to_chromedriver.exe");
