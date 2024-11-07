@@ -11,7 +11,7 @@ import pages.*;
 
 import static org.hamcrest.CoreMatchers.is;
 
-public class HomePageTest {
+public class HomePageTest  extends BaseTest{
     WebDriver driver = new ChromeDriver();
     LoginPage loginPage = new LoginPage(driver);
     HomePage homePage = new HomePage(driver);
@@ -19,13 +19,6 @@ public class HomePageTest {
     ProfileImagePage profileImagePage = new ProfileImagePage(driver);
     ProfileNewCardPage profileNewCardPage = new ProfileNewCardPage(driver);
 
-    @Before
-    public void setUp() {
-        driver.get("https://qa-mesto.praktikum-services.ru/");
-        String email = "qatest@test.ru";
-        String password = "test";
-        loginPage.login(email, password);
-    }
 
     @Test
     @DisplayName("Check Email in Header")
@@ -77,10 +70,5 @@ public class HomePageTest {
         profileNewCardPage.enterNewPlaceName(newName);
         profileNewCardPage.enterNewCardLink(newLink);
         profileNewCardPage.clickButtonSavePlace();
-    }
-
-    @After
-    public void tearDown() {
-        driver.quit();
     }
 }
