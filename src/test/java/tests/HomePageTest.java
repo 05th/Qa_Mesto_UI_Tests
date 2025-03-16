@@ -23,7 +23,7 @@ public class HomePageTest  extends BaseTest{
     @Test
     @DisplayName("Check Email in Header")
     public void checkEmailInHeader() {
-        homePage.waitForLoadHeader();
+        homePage.waitForVisibility();
         String actualResult = homePage.getTextEmailHeader();
         String expectedResult = "qatest@test.ru";
         MatcherAssert.assertThat(actualResult, is(expectedResult));

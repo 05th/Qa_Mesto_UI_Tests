@@ -25,27 +25,26 @@ public class BasePage {
     }
 
     // Метод для ожидания видимости элемента
-    protected void waitForVisibility(By locator) {
+    protected void waitForVisibility() {
         wait.until(driver -> driver.findElement(locator).isDisplayed());
     }
 
     // Метод для клика по элементу
     protected void click(By locator) {
-        waitForVisibility(locator);
+        waitForVisibility();
         driver.findElement(locator).click();
     }
 
     // Метод для ввода текста в элемент
     protected void type(By locator, String text) {
-        waitForVisibility(locator);
+        waitForVisibility();
         driver.findElement(locator).clear();
         driver.findElement(locator).sendKeys(text);
     }
 
     // Метод для получения текста элемента
     protected String getText(By locator) {
-        waitForVisibility(locator);
+        waitForVisibility();
         return driver.findElement(locator).getText();
     }
-
 }

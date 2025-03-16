@@ -7,9 +7,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static java.time.Duration.ofSeconds;
 
-public class HomePage {
+public class HomePage extends BasePage{
 
-    private WebDriver driver;
     private By headerUserEmail = By.xpath("//p[@class = 'header__user']");
     private By logOutButton = By.xpath("//button[@class = 'header__logout']");
     private By profileImage = By.xpath("//div[@class = 'profile__image']");
@@ -19,13 +18,15 @@ public class HomePage {
     private By profileCardAddButton = By.xpath("//button[@class = 'profile__add-button']");
 
     public HomePage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     // Method for loading page
-    public void waitForLoadHeader() {
-        new WebDriverWait(driver, ofSeconds(3))
-                .until(ExpectedConditions.visibilityOfElementLocated(headerUserEmail));
+
+
+    @Override
+    protected void waitForVisibility() {
+        super.waitForVisibility();
     }
 
     // Method for get text from email header
